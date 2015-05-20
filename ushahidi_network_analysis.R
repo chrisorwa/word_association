@@ -48,9 +48,9 @@ g3 = graph.adjacency(M3, weighted=TRUE, mode="undirected",
 
 # prepare ingredients for plot
 V(g3)$size = 10
-V(g3)$label = V(g)$name
-V(g3)$degree = degree(g)
-#V(g)$label.cex = 1.5 * log10(V(g)$degree)
+V(g3)$label = V(g3)$name
+V(g3)$degree = degree(g3)
+#V(g3)$label.cex = 1.5 * log10(V(g3)$degree)
 V(g3)$label.color = hsv(0, 0, 0.2, 0.55)
 V(g3)$frame.color = NA
 V(g3)$color = gcols
@@ -72,8 +72,8 @@ plot(g3, layout=glay)
 title("\nWord Relation",
       col.main="gray40", cex.main=1.5, family="serif")
       
-plot(g)
-dev.off()
+plot(g3)
+
 
 #write data to disk
 write.csv(M2,'data.csv')
